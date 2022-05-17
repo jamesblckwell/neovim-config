@@ -11,13 +11,15 @@ Plug 'ludovicchabant/vim-gutentags'     " Gutentags
 Plug 'itchyny/vim-gitbranch'            " Branch info for status line
 Plug 'tpope/vim-fugitive'               " Git wrapper
 Plug 'tpope/vim-commentary'             " Commenting
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
+" Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+" Plug 'junegunn/fzf.vim'
+Plug 'nvim-lua/plenary.nvim'            " Plenary
+Plug 'nvim-telescope/telescope.nvim'    " Telescope
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'SirVer/ultisnips'                 " Ultisnips
 Plug 'honza/vim-snippets'               " Collection of ultisnips
 Plug 'sheerun/vim-polyglot'             " Language packs
 Plug 'preservim/nerdtree'               " NERDTree
-Plug 'preservim/tagbar'                 " Tagbar
 Plug 'tpope/vim-dadbod'                 " DB management
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
@@ -44,6 +46,9 @@ Plug 'rhysd/vim-grammarous'
 
 " HTML Specific
 Plug 'mattn/emmet-vim'
+
+" Vue Specific
+Plug 'leafOfTree/vim-vue-plugin'
 
 " Dev
 Plug 'jamesblckwell/npm-vim'

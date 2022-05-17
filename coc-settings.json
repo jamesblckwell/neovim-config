@@ -1,0 +1,4 @@
+{
+    "coc.preferences.formatOnSaveFiletypes": ["javascript", "css", "javascriptreact", "typescript", "typescripreact", "json", "html"],
+    "coc.preferences.semanticTokensHighlights": true
+}

@@ -1,4 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =2
-let g:netrw_dirhist_2='/home/james/dev/example-app'
-let g:netrw_dirhist_1='/home/james/.config'
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/home/james.blackwell/dev/svn/EB1169804_Kitten_Puppy_Fleas_ISC'
+let g:netrw_dirhist_2='/home/james.blackwell/dev/svn/EB1169804_Vets4Pets_ISC'
+let g:netrw_dirhist_1='/home/james.blackwell/dev/smirnoff-au-e-bike-microsite/resources/scss'

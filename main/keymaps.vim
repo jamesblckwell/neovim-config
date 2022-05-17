@@ -14,4 +14,7 @@ nmap <silent> gr <Plug>(coc-references)
 nmap <silent> do <Plug>(coc-codeaction)
 
 " Open tagbar
-nmap <silent> tb :TagbarToggle<CR>
+nmap <silent> tb :CocOutline<CR>
+
+" nmap <silent> ff :Files<cr>
+nmap <silent> ff :Telescope find_files<cr>
