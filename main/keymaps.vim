@@ -16,5 +16,8 @@ nmap <silent> do <Plug>(coc-codeaction)
 " Open tagbar
 nmap <silent> tb :CocOutline<CR>
 
-" nmap <silent> ff :Files<cr>
-nmap <silent> ff :Telescope find_files<cr>
+" Finders
+nmap <silent> ff :Files<cr>
+nmap <silent> fa :Rg<cr>
+nmap <silent> fb :Buffers<cr>
+nmap <silent> fl :Lines<cr>

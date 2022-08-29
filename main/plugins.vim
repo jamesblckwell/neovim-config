@@ -11,8 +11,8 @@ Plug 'ludovicchabant/vim-gutentags'     " Gutentags
 Plug 'itchyny/vim-gitbranch'            " Branch info for status line
 Plug 'tpope/vim-fugitive'               " Git wrapper
 Plug 'tpope/vim-commentary'             " Commenting
-" Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-" Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 Plug 'nvim-lua/plenary.nvim'            " Plenary
 Plug 'nvim-telescope/telescope.nvim'    " Telescope
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
@@ -41,7 +41,7 @@ Plug 'jparise/vim-graphql'
 
 " Markdown Specific
 Plug 'tpope/vim-markdown'
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug'] }
 Plug 'rhysd/vim-grammarous'
 
 " HTML Specific
