@@ -3,7 +3,7 @@ let g:lightline = {
     \'colorscheme': 'jellybeans',
     \'active': {
     \   'left': [ ['mode', 'paste'],
-    \          [ 'gitbranch', 'readonly', 'LightlineFilename', 'modified'] ] 
+    \          [ 'gitbranch', 'readonly', 'LightlineFilename', 'modified', 'coc_ok', 'coc_errors'] ] 
     \},
     \'inactive': {
     \   'left': [['LightlineFilename', 'modified']]
@@ -27,4 +27,5 @@ set statusline+=%{gutentags#statusline()}
 " Mode is already shown in Lightline - so it doesn't need to appear again
 set noshowmode
 
-
+" Register coc integrations
+call lightline#coc#register()

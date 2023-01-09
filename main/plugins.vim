@@ -21,6 +21,7 @@ Plug 'honza/vim-snippets'               " Collection of ultisnips
 Plug 'sheerun/vim-polyglot'             " Language packs
 Plug 'preservim/nerdtree'               " NERDTree
 Plug 'tpope/vim-dadbod'                 " DB management
+Plug 'josa42/vim-lightline-coc'         " Lightline-Coc integration
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " PHP Specific
@@ -49,6 +50,9 @@ Plug 'mattn/emmet-vim'
 
 " Vue Specific
 Plug 'leafOfTree/vim-vue-plugin'
+
+" Svelte Specific
+Plug 'evanleck/vim-svelte'
 
 " Dev
 Plug 'jamesblckwell/npm-vim'
