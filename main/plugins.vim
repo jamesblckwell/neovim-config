@@ -10,7 +10,8 @@ Plug 'itchyny/lightline.vim'            " Status line
 Plug 'ludovicchabant/vim-gutentags'     " Gutentags
 Plug 'itchyny/vim-gitbranch'            " Branch info for status line
 Plug 'tpope/vim-fugitive'               " Git wrapper
-Plug 'tpope/vim-commentary'             " Commenting
+" Plug 'tpope/vim-commentary'           " Commenting
+Plug 'numToStr/Comment.nvim'            " Commenting
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'nvim-lua/plenary.nvim'            " Plenary
@@ -23,6 +24,7 @@ Plug 'preservim/nerdtree'               " NERDTree
 Plug 'tpope/vim-dadbod'                 " DB management
 Plug 'josa42/vim-lightline-coc'         " Lightline-Coc integration
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'github/copilot.vim'
 
 " PHP Specific
 Plug 'StanAngeloff/php.vim'
