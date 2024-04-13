@@ -9,3 +9,5 @@ Clone this repository:
 ``` 
 git clone git@github.com:jamesblckwell/vim-config.git $HOME/.config/nvim 
 ```
+
+That's it!
