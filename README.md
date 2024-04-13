@@ -6,4 +6,6 @@ My current neovim config, now migrated to Lazy.nvim.
 
 Clone this repository:
 
-``` git clone git@github.com:jamesblckwell/vim-config.git $HOME/.config/nvim ```
+``` 
+    $ git clone git@github.com:jamesblckwell/vim-config.git $HOME/.config/nvim 
+```
