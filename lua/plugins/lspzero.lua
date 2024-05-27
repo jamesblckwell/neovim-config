@@ -23,9 +23,17 @@ return {
             lsp.buffer_autoformat()
         end)
 
-
-        -- (Optional) Configure lua language server for neovim
-        require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
+        require('mason').setup({})
+        require('mason-lspconfig').setup({
+            -- Replace the language servers listed here
+            -- with the ones you want to install
+            ensure_installed = { 'tsserver', 'gopls', 'svelte' },
+            handlers = {
+                function(server_name)
+                    require('lspconfig')[server_name].setup({})
+                end,
+            },
+        })
 
         lsp.setup()
     end
