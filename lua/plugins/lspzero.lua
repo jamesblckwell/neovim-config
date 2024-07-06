@@ -6,6 +6,7 @@ return {
         'neovim/nvim-lspconfig',
         'williamboman/mason.nvim',
         build = function()
+            --@diagnostic disable-next-line: undefined-global
             pcall(vim.cmd, 'MasonUpdate')
         end,
         'williamboman/mason-lspconfig.nvim',
@@ -13,8 +14,17 @@ return {
         -- auto completion
         'hrsh7th/nvim-cmp',
         'hrsh7th/cmp-nvim-lsp',
+
+        -- snippets
         'L3MON4D3/LuaSnip',
         'rafamadriz/friendly-snippets',
+
+        -- autoformat
+        'stevearc/conform.nvim',
+
+        -- status
+        { "j-hui/fidget.nvim", opts = {} }
+
     },
     config = function()
         local lsp = require('lsp-zero').preset({})
@@ -43,9 +53,16 @@ return {
             info = '»'
         })
 
+        -- Autoformatting Setup
+        require("conform").setup {
+            formatters_by_ft = {
+                lua = { "stylua" },
+            },
+        }
+
+
         local cmp = require('cmp')
         local cmp_action = lsp.cmp_action()
-
 
         cmp.setup({
             sources = {
