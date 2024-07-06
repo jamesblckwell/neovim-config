@@ -10,6 +10,7 @@ return {
         -- local types = require("luasnip.util.types")
 
         require('luasnip.loaders.from_vscode').lazy_load()
+        require("luasnip.loaders.from_lua").load({ paths = { "lua/snippets" } })
 
         ls.config.set_config({
             history = true,
@@ -21,6 +22,21 @@ return {
             if ls.expand_or_jumpable() then
                 ls.expand_or_jump()
             end
-        end)
+        end, { silent = true, desc = "LuaSnip: Expand or Jump forward" })
+
+        vim.keymap.set({ "i", "s" }, "<c-j>", function()
+            if ls.jumpable(-1) then
+                ls.jump(-1)
+            end
+        end, { silent = true, desc = "LuaSnip: Jump backward" })
+
+        vim.keymap.set({ "i", "s" }, "<c-l>", function()
+            if ls.choice_active() then
+                ls.change_choice(1)
+            end
+        end, { desc = "LuaSnip: List options" })
+
+        vim.keymap.set("n", "<leader><leader>k", "<cmd>source ~/.config/nvim/lua/plugins/luasnip.lua<cr>",
+            { silent = true, desc = "LuaSnip: Reload snippets" })
     end
 }
