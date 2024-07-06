@@ -13,6 +13,9 @@ return {
         vim.keymap.set('n', '<leader>fw', function()
             builtin.grep_string({ search = vim.fn.input("Grep > ") })
         end, { desc = "[F]ind [W]ord" })
+        vim.keymap.set('n', '<leader>ft', function()
+            builtin.grep_string({ search = "TODO" })
+        end, { desc = "[F]ind [T]odo" })
 
         require('telescope').load_extension('undo')
         vim.keymap.set("n", "<leader>u", "<cmd>Telescope undo<cr>", { desc = "[U]ndotree" })
