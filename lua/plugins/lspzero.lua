@@ -78,5 +78,13 @@ return {
             -- replace the line below with the function from lsp-kind
             formatting = lsp.cmp_format({ details = true }),
         })
+
+        -- setup completion for vim-dadbod
+        cmp.setup.filetype({ "sql" }, {
+            sources = {
+                { name = "vim-dadbod-completion" },
+                { name = "buffer" }
+            }
+        })
     end
 }
