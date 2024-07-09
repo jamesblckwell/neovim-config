@@ -31,6 +31,14 @@ return {
 
         lsp.on_attach(function(_, bufnr)
             lsp.default_keymaps({ buffer = bufnr })
+            vim.keymap.set('n', "<leader>gd", vim.lsp.buf.definition, { buffer = bufnr, desc = "Go to definition" })
+            vim.keymap.set('n', "<leader>gr", vim.lsp.buf.references, { buffer = bufnr, desc = "Go to references" })
+            vim.keymap.set('n', "<leader>gD", vim.lsp.buf.declaration, { buffer = bufnr, desc = "Go to declaration" })
+            vim.keymap.set('n', "<leader>gT", vim.lsp.buf.type_definition,
+                { buffer = bufnr, desc = "Go to type definition" })
+            vim.keymap.set('n', "<leader>K", vim.lsp.buf.hover, { buffer = bufnr, desc = "Go to implementation" })
+            vim.keymap.set('n', "<leader>cr", vim.lsp.buf.rename, { buffer = bufnr, desc = "Rename" })
+            vim.keymap.set('n', "<leader>ca", vim.lsp.buf.code_action, { buffer = bufnr, desc = "Code action" })
             lsp.buffer_autoformat()
         end)
 
@@ -60,7 +68,6 @@ return {
             },
         }
 
-
         local cmp = require('cmp')
         local cmp_action = lsp.cmp_action()
 
@@ -86,10 +93,6 @@ return {
                 -- scroll up and down the documentation window
                 ['<C-u>'] = cmp.mapping.scroll_docs(-4),
                 ['<C-d>'] = cmp.mapping.scroll_docs(4),
-
-                -- navigate between snippet placeholders
-                ['<C-f>'] = cmp_action.luasnip_jump_forward(),
-                ['<C-b>'] = cmp_action.luasnip_jump_backward(),
             }),
             -- note: if you are going to use lsp-kind (another plugin)
             -- replace the line below with the function from lsp-kind
