@@ -14,6 +14,7 @@ return {
         -- auto completion
         'hrsh7th/nvim-cmp',
         'hrsh7th/cmp-nvim-lsp',
+        'f3fora/cmp-spell',
 
         -- snippets
         'L3MON4D3/LuaSnip',
@@ -77,6 +78,7 @@ return {
                 { name = 'nvim_lsp' },
                 { name = 'luasnip', keyword_length = 2 },
                 { name = 'buffer',  keyword_length = 3 },
+                { name = 'spell',   keyword_length = 3 }
             },
             snippet = {
                 expand = function(args)

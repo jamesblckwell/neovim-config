@@ -31,3 +31,7 @@ opt.clipboard = 'unnamedplus'
 opt.inccommand = 'split'
 
 opt.signcolumn = 'yes'
+
+opt.conceallevel = 2
+
+opt.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"

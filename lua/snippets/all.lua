@@ -1,5 +1,6 @@
 ---@diagnostic disable: undefined-global
 return {
+    -- Create a todo comment in following style: {comment style} TODO {date} - {cursor}
     s("todo", fmt("{} TODO {} - {}",
         {
             f(function(_, parent, _)

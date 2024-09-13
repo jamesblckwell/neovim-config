@@ -14,3 +14,15 @@ vim.keymap.set("n", "<leader>y", "\"+y")
 vim.keymap.set("v", "<leader>y", "\"+y")
 
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
+
+-- Autocommands
+
+-- Markdown files
+vim.api.nvim_create_autocmd("BufReadPre", {
+    pattern = "*.md",
+    callback = function()
+        vim.opt_local.textwidth = 80
+        vim.opt_local.spell = true
+        vim.opt_local.spelllang = { "en_gb" }
+    end
+})

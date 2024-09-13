@@ -1,3 +1,4 @@
 return {
-    'evanleck/vim-svelte'
+    'evanleck/vim-svelte',
+    ft = 'svelte',
 }
