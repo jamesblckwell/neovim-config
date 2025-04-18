@@ -1,3 +1,2 @@
 ---@diagnostic disable: undefined-global
-return {
-}
+return {}
