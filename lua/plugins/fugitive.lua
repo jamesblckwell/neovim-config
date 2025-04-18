@@ -1,5 +1,5 @@
 return {
-    'tpope/vim-fugitive',
+    "tpope/vim-fugitive",
     cmd = "Git",
     keys = {
         { "<leader>gs",  ":Git<CR>",                  { desc = "[G]it [S]tatus" } },
@@ -10,5 +10,5 @@ return {
         { "<leader>gb",  ":Git blame %<CR>",          { desc = "[G]it [B]lame" } },
         { "<leader>gl",  ":Git log<CR>",              { desc = "[G]it [L]og" } },
         { "<leader>gd",  ":Git diff<CR>",             { desc = "[G]it [D]iff" } },
-    }
+    },
 }
