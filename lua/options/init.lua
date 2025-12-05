@@ -10,7 +10,10 @@ opt.expandtab = true
 
 opt.smartindent = true
 
-opt.wrap = false
+opt.wrap = true
+opt.textwidth = 0
+opt.wrapmargin = 0
+opt.linebreak = true
 
 opt.swapfile = false
 opt.backup = false
@@ -26,11 +29,11 @@ opt.scrolloff = 8
 
 opt.updatetime = 50
 
-opt.clipboard = 'unnamedplus'
+opt.clipboard = "unnamedplus"
 
-opt.inccommand = 'split'
+opt.inccommand = "split"
 
-opt.signcolumn = 'yes'
+opt.signcolumn = "yes"
 
 opt.conceallevel = 2
 
