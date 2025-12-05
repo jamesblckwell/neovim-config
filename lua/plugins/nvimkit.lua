@@ -1,4 +1,4 @@
 return {
-    "jamesblckwell/nvimkit.nvim",
-    opts = {}
+	"jamesblckwell/nvimkit.nvim",
+	opts = {},
 }
