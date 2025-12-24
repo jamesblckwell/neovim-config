@@ -2,14 +2,14 @@ return {
 	"neovim/nvim-lspconfig",
 	lazy = false,
 	keys = {
-		{ "<leader>k", vim.diagnostic.open_float, { desc = "[D]iagnostic" } },
+		{ "<leader>k", vim.diagnostic.open_float, { desc = "Diagnostic" } },
 		{ "<leader>ld", vim.lsp.buf.definition, { desc = "[L]SP [D]efitinion" } },
 		{ "<leader>lr", vim.lsp.buf.references, { desc = "[L]SP [R]eferences" } },
 		{ "<leader>lD", vim.lsp.buf.declaration, { desc = "[L]SP [D]eclaration" } },
 		{ "<leader>lT", vim.lsp.buf.type_definition, { desc = "[L]SP [T]ype Definition" } },
 		{ "<leader>lT", vim.lsp.buf.type_definition, { desc = "[L]SP [T]ype Definition" } },
-		{ "<leader>cr", vim.lsp.buf.rename, { desc = "[L]SP [C]ode [R]ename" } },
-		{ "<leader>ca", vim.lsp.buf.code_action, { desc = "[L]SP [C]ode [A]ction" } },
+		{ "<leader>cr", vim.lsp.buf.rename, { desc = "LSP [C]ode [R]ename" } },
+		{ "<leader>ca", vim.lsp.buf.code_action, { desc = "LSP [C]ode [A]ction" } },
 	},
 	dependencies = {
 		-- Mason
@@ -56,6 +56,7 @@ return {
 				},
 			},
 		},
+
 		-- Conform
 		{
 			"stevearc/conform.nvim",
