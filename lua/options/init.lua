@@ -20,6 +20,8 @@ opt.backup = false
 opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 opt.undofile = true
 
+opt.autoread = true
+
 opt.hlsearch = false
 opt.incsearch = true
 

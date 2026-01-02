@@ -1,17 +1,26 @@
 return {
-    { "nvim-treesitter/playground", cmd = "TSPlaygroundToggle" },
     {
         "nvim-treesitter/nvim-treesitter",
         lazy = false,
         build = ":TSUpdate",
-        config = function()
-            local configs = require("nvim-treesitter.configs")
-
-            configs.setup({
-                sync_install = false,
-                highlight = { enable = true },
-                indent = { enable = true },
-            })
-        end
+        branch = "main",
+        dependencies = {
+            "nvim-treesitter/nvim-treesitter-textobjects",
+            branch = "main"
+        },
+        opts = {
+            highlight = { enable = true },
+            indent = { enable = true },
+            ensure_installed = {
+                "lua",
+                "go",
+                "html",
+                "javascript",
+                "typescript",
+                "astro",
+                "markdown",
+                "markdown_inline"
+            }
+        }
     }
 }

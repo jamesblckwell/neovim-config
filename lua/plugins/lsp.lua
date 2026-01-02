@@ -55,6 +55,7 @@ return {
                 snippets = { preset = "luasnip" },
                 sources = {
                     default = { "lsp", "path", "snippets", "buffer" },
+                    -- lsp = { async = true }
                 },
                 keymap = {
                     ["<C-Space>"] = { "show", "show_documentation", "hide_documentation" },
@@ -63,6 +64,9 @@ return {
 
                     ["<Tab>"] = {
                         function(cmp)
+                            if require("sidekick").nes_jump_or_apply() then
+                                return
+                            end
                             return cmp.select_next()
                         end,
                         "snippet_forward",
