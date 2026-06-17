@@ -47,11 +47,17 @@ return {
         {
             "saghen/blink.cmp",
             event = { "BufEnter" },
-            build = "cargo +nightly build --release",
+            build = function()
+                -- Build the fuzzy matcher, wait up to 60 seconds
+                -- you can use `gb` in `:Lazy` to rebuild the plugin as needed
+                require('blink.cmp').build():wait(60000)
+            end,
             dependencies = {
+                "saghen/blink.lib",
                 "rafamadriz/friendly-snippets",
             },
             opts = {
+                fuzzy = { implementation = "lua" },
                 snippets = { preset = "luasnip" },
                 sources = {
                     default = { "lsp", "path", "snippets", "buffer" },
@@ -128,5 +134,8 @@ return {
                 },
             },
         })
+
+        vim.o.updatetime = 250
+        vim.cmd([[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]])
     end,
 }
