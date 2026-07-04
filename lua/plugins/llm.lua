@@ -1,6 +1,15 @@
 return {
     "folke/sidekick.nvim",
     lazy = false,
+    opts = {
+        cli = {
+            tools = { antigravity = { cmd = { "agy" } } },
+            mux = {
+                backend = "tmux",
+                enabled = true,
+            }
+        },
+    },
     keys = {
         {
             "<tab>",
@@ -54,13 +63,4 @@ return {
             desc = "Sidekick Select Prompt",
         },
     },
-    opts = {
-        cli = {
-            mux = {
-                backend = "tmux",
-                enabled = true,
-            }
-
-        }
-    }
 }

@@ -15,13 +15,16 @@ return {
         {
             "mason-org/mason-lspconfig.nvim",
             opts = {
-                ensure_installed = { "ts_ls", "gopls", "harper_ls" },
+                ensure_installed = { "ts_ls", "gopls", "harper_ls", "copilot" },
                 handlers = {
                     function(server_name)
                         local capabilities = vim.lsp.protocol.make_client_capabilities()
                         require("lspconfig")[server_name].setup({
                             capabilities = require("blink.cmp").get_lsp_capabilities(capabilities),
                         })
+                    end,
+                    ["copilot"] = function()
+                        -- Setup natively in config() below to avoid lspconfig warnings/issues
                     end,
                 },
             },
@@ -123,6 +126,13 @@ return {
     config = function()
         -- lua-language-server installed through Mason doesn't work for arch/wsl (idk I can't tell which), so using the one provided by pacman 2025-12-05
         vim.lsp.enable("lua_ls")
+
+        -- Configure and enable GitHub Copilot LSP natively (Neovim 0.12+)
+        local capabilities = vim.lsp.protocol.make_client_capabilities()
+        vim.lsp.config("copilot", {
+            capabilities = require("blink.cmp").get_lsp_capabilities(capabilities),
+        })
+        vim.lsp.enable("copilot")
 
         vim.diagnostic.config({
             signs = {
